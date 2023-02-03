@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import Form from "./Components/Form";
+import { List } from "./Components/List";
 
 function App() {
+  const [bone, setBone] = useState({ name: "", added: false });
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    console.log(bone.name);
+  }, [bone]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Form bone={bone} setBone={setBone} list={list} setList={setList} />
+      <List list={list} setList={setList} bone={bone} />
+    </>
   );
 }
 
