@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 Titulo de proyecto: lista de mercado
 Autor: Nicolas Olmos
 Encuentrame: https://github.com/nicolasnos
 
+=======
+>>>>>>> b9f20603b0cc55e6e9f5b14a8b39efad19b1b120
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

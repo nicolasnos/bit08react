@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "bit08-react",
   "version": "0.1.0",
+=======
+  "name": "bit08react",
+  "version": "0.1.0",
+  "homepage": "https://nicolasnos.github.io/bit08react",
+>>>>>>> b9f20603b0cc55e6e9f5b14a8b39efad19b1b120
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,10 +17,18 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+=======
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+>>>>>>> b9f20603b0cc55e6e9f5b14a8b39efad19b1b120
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -37,5 +51,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
+=======
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+>>>>>>> b9f20603b0cc55e6e9f5b14a8b39efad19b1b120
   }
 }
