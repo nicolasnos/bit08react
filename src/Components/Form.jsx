@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const Form = ({ bone, setBone, list, setList }) => {
   const handleInput = (e) => {
-    setBone({ ...bone, id: uuidv4(), name: e.target.value });
+    setBone({ id: uuidv4(), name: e.target.value, studied: bone.studied });
   };
 
   const handleSave = (e) => {
@@ -21,6 +21,7 @@ const Form = ({ bone, setBone, list, setList }) => {
         placeholder="escribe hueso"
         value={bone.name}
         onInput={handleInput}
+        required
       />
       <button onClick={handleSave}>Agregar hueso</button>
     </form>

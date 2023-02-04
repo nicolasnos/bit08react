@@ -1,13 +1,15 @@
 import React from "react";
-import { useState, useEffect } from "react";
-const List = ({ bone, list, setList }) => {
+import { useState } from "react";
+import ItemList from "./ItemList";
+const List = ({ list, setList }) => {
   const [first, setfirst] = useState([]);
-  console.log(list);
+
+  const items = list.map((item, i) => {
+    return <ItemList bName={item.name} key={item.id} setList={setList} />;
+  });
   return (
     <>
-      <ol>hola</ol>;
-      <input type="button" value="cambiar nombre" />
-      <input type="button" value="eliminar" />
+      <ul>{items}</ul>
     </>
   );
 };

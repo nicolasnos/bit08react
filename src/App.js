@@ -4,11 +4,8 @@ import Form from "./Components/Form";
 import { List } from "./Components/List";
 
 function App() {
-  const [bone, setBone] = useState({ name: "", added: false });
+  const [bone, setBone] = useState({ name: "", studied: false });
   const [list, setList] = useState([]);
-  useEffect(() => {
-    console.log(bone.name);
-  }, [bone]);
 
   return (
     <>
