@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
+import { TiDeleteOutline } from "react-icons/ti";
+import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
+import { BsCheckCircle } from "react-icons/bs";
 
-const ItemList = ({ bName, setList }) => {
+const ItemList = ({ bName, deleteBone, changeState, id }) => {
+  const [modal, setModal] = useState(false);
   const changeName = () => {
-    console.log(bName);
-  };
-
-  const deleteBone = () => {
-    console.info(bName);
+    setModal(true);
   };
 
   return (
     <li>
       {bName}
-      <input type="checkbox" name="" id="" />
-      <input type="button" value="cambiar nombre" onClick={changeName} />
-      <input type="button" value="eliminar" onClick={deleteBone} />
+      <span>
+        <BsCheckCircle
+          style={{ color: "lightgreen" }}
+          onClick={() => changeState(id)}
+        />
+      </span>
+      <MdOutlineDriveFileRenameOutline
+        style={{ color: "brown" }}
+        onClick={changeName}
+      />
+      <span>
+        <TiDeleteOutline
+          style={{ color: "red" }}
+          onClick={() => {
+            deleteBone(id);
+          }}
+        />
+      </span>
     </li>
   );
 };

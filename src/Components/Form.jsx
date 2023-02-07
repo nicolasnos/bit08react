@@ -9,7 +9,7 @@ const Form = ({ bone, setBone, list, setList }) => {
   const handleSave = (e) => {
     e.preventDefault();
     setList([...list, bone]);
-    setBone({ id: null, name: "", added: false });
+    setBone({ id: null, name: "", studied: false });
   };
 
   return (
